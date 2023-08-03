@@ -22,4 +22,11 @@ const UserSchema = new mongoose.Schema({
     type: Number,
     default: 0,
   },
-});
+  suscribedUsers: {
+    type: [String]
+  }
+},
+{timestamps: true}
+);
+
+export default mongoose.model('User', UserSchema)
